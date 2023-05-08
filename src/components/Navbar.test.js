@@ -20,4 +20,8 @@ describe("Navbar component", () => {
   it("should render a senate member navigation item", () => {
     expect(component.contains("Senate Members")).toBe(true);
   });
+
+  it("should render a amendment navigation item", () => {
+    expect(component.contains("Amendments")).toBe(true);
+  });
 });

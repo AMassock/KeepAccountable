@@ -5,6 +5,7 @@ export default function Navbar() {
     <nav>
       <a href="#">Home</a>
       <a href="#">Bills</a>
+      <a href="#">Amendments</a>
       <a href="#">Congress Members</a>
       <a href="#">Senate Members</a>
       <a href="#">Bills</a>
