@@ -1,14 +1,26 @@
 import React from "react";
+import { Link, Route, Routes } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Bills</a>
-      <a href="#">Amendments</a>
-      <a href="#">Congress Members</a>
-      <a href="#">Senate Members</a>
-      <a href="#">Bills</a>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/bills">Bills</Link>
+        </li>
+        <li>
+          <Link to="/amendments">Amendments</Link>
+        </li>
+        <li>
+          <Link to="/congressMembers">Congress Members</Link>
+        </li>
+        <li>
+          <Link to="/senateMembers">Senate Members</Link>
+        </li>
+      </ul>
     </nav>
   );
 }

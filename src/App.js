@@ -1,13 +1,24 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Bills from "./components/Bills";
+import { Routes, Route } from "react-router-dom";
+import {
+  // Home,
+  // Dashboard,
+  Bills,
+  Navbar,
+  // NotFound,
+  Layout,
+} from "./pages/index";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Bills />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          {/* <Route index element={<Home />} /> */}
+          <Route path="/bills" element={<Bills />} />
+          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+        </Route>
+      </Routes>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Navbar from "./Navbar.js";
+import Navbar from "../Navbar";
 
 describe("Navbar component", () => {
   const component = shallow(<Navbar />);
