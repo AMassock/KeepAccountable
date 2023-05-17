@@ -1,3 +1,3 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Bills from "./Navbar.js";
+import Bills from "../Navbar.js";

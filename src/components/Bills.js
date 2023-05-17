@@ -25,9 +25,6 @@ export default function Bills() {
     return <div>Loading...</div>;
   }
 
-  console.log(billData.bills[0]);
-  console.log(typeof billData.bills);
-
   let data = billData.bills.map(
     ({
       congress,
@@ -63,7 +60,10 @@ export default function Bills() {
             }}
           >
             <div>
-              <div>{title}</div>
+              <div>
+                <h1>{title}</h1>
+                <p>{type}</p>
+              </div>
             </div>
           </Link>
         </div>

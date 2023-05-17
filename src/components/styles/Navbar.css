@@ -1,0 +1,15 @@
+/* * {
+  border: 1px solid red;
+} */
+
+nav {
+  display: flexbox;
+}
+
+li {
+  background-color: black;
+  color: white;
+  display: inline-flex;
+  padding: 10px;
+  margin: 10px;
+}
