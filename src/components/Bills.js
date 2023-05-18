@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Bill from "./Bill";
 
 let url =
-  "https://api.congress.gov/v3/bill/117/hr?api_key=a9OP2jf04tL6ExMYMzucnqqxJA3cpV8EMhBrYA9H";
+  "https://api.congress.gov/v3/bill?api_key=a9OP2jf04tL6ExMYMzucnqqxJA3cpV8EMhBrYA9H";
 
 export default function Bills() {
   const [billData, setBillData] = useState([]);
@@ -62,7 +63,7 @@ export default function Bills() {
             <div>
               <div>
                 <h1>{title}</h1>
-                <p>{type}</p>
+                <p>Branch of Origin: {originChamber}</p>
               </div>
             </div>
           </Link>
@@ -70,5 +71,7 @@ export default function Bills() {
       );
     }
   );
+  // console.log(typeof data);
+  // return <div>{data}</div>;
   return <div>{data}</div>;
 }
