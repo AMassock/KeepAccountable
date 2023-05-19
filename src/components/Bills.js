@@ -16,7 +16,7 @@ export default function Bills() {
           setBillData(data);
         })
         .catch((err) => {
-          console.log(err);
+          console.log("Error fetching data", err);
         });
     };
     fetchData();
@@ -25,53 +25,16 @@ export default function Bills() {
   if (!billData.bills) {
     return <div>Loading...</div>;
   }
-
-  let data = billData.bills.map(
-    ({
-      congress,
-      latestAction,
-      actionDate,
-      text,
-      number,
-      originChamber,
-      originChamberCode,
-      title,
-      type,
-      updateDate,
-      updateDateIncludingText,
-      url,
-    }) => {
-      return (
-        <div>
-          <Link
-            to={`/bill/${number}`}
-            location={{
-              congress: congress,
-              latestAction: latestAction,
-              actionDate: actionDate,
-              text: text,
-              number: number,
-              originChamber: originChamber,
-              originChamberCode: originChamberCode,
-              title: title,
-              type: type,
-              updateDate: updateDate,
-              updateDateIncludingText: updateDateIncludingText,
-              url: url,
-            }}
-          >
-            <div>
-              <div>
-                <h1>{title}</h1>
-                <p>Branch of Origin: {originChamber}</p>
-              </div>
-            </div>
+  return (
+    <div>
+      <h1>Latest Congress Bills</h1>
+      <ul>
+        {billData.bills.map((bill) => (
+          <Link to={`/bill/${bill.number}`}>
+            <li key={bill.number}>{bill.title}</li>
           </Link>
-        </div>
-      );
-    }
+        ))}
+      </ul>
+    </div>
   );
-  // console.log(typeof data);
-  // return <div>{data}</div>;
-  return <div>{data}</div>;
 }
