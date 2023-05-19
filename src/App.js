@@ -1,11 +1,11 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import {
-  // Home,
+  Home,
   // Dashboard,
   Bills,
   Bill,
-  Navbar,
+  // Navbar,
   // NotFound,
   Layout,
 } from "./pages/index";
@@ -15,7 +15,7 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Layout />}>
-          {/* <Route index element={<Home />} /> */}
+          <Route index element={<Home />} />
           <Route path="/bills" element={<Bills />} />
           <Route path="/bill/:congress/:type/:number" element={<Bill />} />
           {/* <Route path="/dashboard" element={<Dashboard />} /> */}
