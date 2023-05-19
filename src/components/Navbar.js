@@ -21,6 +21,9 @@ export default function Navbar() {
         <li>
           <Link to="/senateMembers">Senate Members</Link>
         </li>
+        <li>
+          <Link to="/dashboard">Dashboard</Link>
+        </li>
       </ul>
     </nav>
   );

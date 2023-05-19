@@ -2,7 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import {
   Home,
-  // Dashboard,
+  Dashboard,
   Bills,
   Bill,
   // Navbar,
@@ -18,7 +18,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/bills" element={<Bills />} />
           <Route path="/bill/:congress/:type/:number" element={<Bill />} />
-          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+          <Route path="/dashboard" element={<Dashboard />} />
         </Route>
       </Routes>
     </div>
