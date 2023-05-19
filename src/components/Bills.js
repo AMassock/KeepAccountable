@@ -25,12 +25,13 @@ export default function Bills() {
   if (!billData.bills) {
     return <div>Loading...</div>;
   }
+
   return (
     <div>
       <h1>Latest Congress Bills</h1>
       <ul>
         {billData.bills.map((bill) => (
-          <Link to={`/bill/${bill.number}`}>
+          <Link to={`/bill/${bill.congress}/${bill.type}/${bill.number}`}>
             <li key={bill.number}>{bill.title}</li>
           </Link>
         ))}
