@@ -5,6 +5,8 @@ import Bill from "../components/Bill.js";
 import Navbar from "../components/Navbar.js";
 // import NotFound from "../components/NotFound.js";
 import Layout from "./Layout.js";
+import BillInterpretation from "../components/BillInterpret.js";
+import Footer from "../components/Footer.js";
 
 export {
   Home,
@@ -13,5 +15,7 @@ export {
   Bill,
   Navbar,
   // NotFound,
+  BillInterpretation,
+  Footer,
   Layout,
 };

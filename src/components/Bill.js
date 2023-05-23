@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import BillInterpretation from "./BillInterpret";
 
 const BillDetails = () => {
   const { congress, type, number } = useParams();
@@ -44,10 +45,11 @@ const BillDetails = () => {
   let sponsor = bill.bill.sponsors;
 
   return (
-    <div>
+    <div key={number}>
       <h1>Bill Details</h1>
       <h2>Title: {bill.bill.title}</h2>
       <p>Description: {bill.bill.description}</p>
+      <BillInterpretation billId={number} />
       {sponsor.map((obj, index) => (
         <p key={index}>{JSON.stringify(obj.fullName)}</p>
       ))}
