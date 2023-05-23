@@ -5,6 +5,7 @@ import {
   Dashboard,
   Bills,
   Bill,
+  Congress,
   // Navbar,
   // NotFound,
   Layout,
@@ -18,6 +19,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/bills" element={<Bills />} />
           <Route path="/bill/:congress/:type/:number" element={<Bill />} />
+          <Route path="/congressMembers/" element={<Congress />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Route>
       </Routes>

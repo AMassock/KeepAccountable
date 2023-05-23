@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-let url =
-  "https://api.congress.gov/v3/bill?api_key=a9OP2jf04tL6ExMYMzucnqqxJA3cpV8EMhBrYA9H";
+let url = `https://api.congress.gov/v3/bill?api_key=a9OP2jf04tL6ExMYMzucnqqxJA3cpV8EMhBrYA9H`;
 
-export default function Bills() {
+export default function Bills(limit) {
   const [billData, setBillData] = useState([]);
 
   useEffect(() => {

@@ -7,12 +7,14 @@ import Navbar from "../components/Navbar.js";
 import Layout from "./Layout.js";
 import BillInterpretation from "../components/BillInterpret.js";
 import Footer from "../components/Footer.js";
+import Congress from "../components/Congress.js";
 
 export {
   Home,
   Dashboard,
   Bills,
   Bill,
+  Congress,
   Navbar,
   // NotFound,
   BillInterpretation,

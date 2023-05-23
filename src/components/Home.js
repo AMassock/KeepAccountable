@@ -1,4 +1,5 @@
 import React from "react";
+import { Bills } from "../pages/index";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <section className="govinfo-section">
           <h2>Featured Documents</h2>
           {/* Display featured documents */}
+          <Bills limit="5" />
         </section>
 
         <section className="govinfo-section">
