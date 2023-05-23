@@ -6,6 +6,7 @@ const BillDetails = () => {
   const { congress, type, number } = useParams();
   const [bill, setBill] = useState();
   const [details, setDetails] = useState();
+  const [selectedBillId, setSelectedBillId] = useState(null);
 
   useEffect(() => {
     const fetchBill = async () => {
@@ -42,6 +43,11 @@ const BillDetails = () => {
   if (!bill) {
     return <div>Loading...</div>;
   }
+
+  const handleBillClick = (number) => {
+    setSelectedBillId(number);
+  };
+
   let sponsor = bill.bill.sponsors;
 
   return (
@@ -49,7 +55,9 @@ const BillDetails = () => {
       <h1>Bill Details</h1>
       <h2>Title: {bill.bill.title}</h2>
       <p>Description: {bill.bill.description}</p>
-      <BillInterpretation billId={number} />
+      <div key={number} onClick={() => handleBillClick(number)}>
+        <BillInterpretation billId={selectedBillId} />
+      </div>
       {sponsor.map((obj, index) => (
         <p key={index}>{JSON.stringify(obj.fullName)}</p>
       ))}

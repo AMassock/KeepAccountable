@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Bill from "./Bill";
 
 let url =
   "https://api.congress.gov/v3/bill?api_key=a9OP2jf04tL6ExMYMzucnqqxJA3cpV8EMhBrYA9H";
