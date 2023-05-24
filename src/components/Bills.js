@@ -25,12 +25,14 @@ export default function Bills(limit) {
   }
 
   return (
-    <div>
-      <h1>Latest Congress Bills</h1>
-      <ul>
+    <div className="bills-container">
+      <h1 className="bills-title">Latest Congress Bills</h1>
+      <ul className="bills-list">
         {billData.bills.map((bill) => (
           <Link to={`/bill/${bill.congress}/${bill.type}/${bill.number}`}>
-            <li key={bill.number}>{bill.title}</li>
+            <li key={bill.number} className="bills-link">
+              {bill.title}
+            </li>
           </Link>
         ))}
       </ul>

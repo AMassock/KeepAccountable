@@ -46,8 +46,8 @@ const BillInterpretation = ({ billId }) => {
   }, [billId]);
 
   return (
-    <div>
-      <h2>Bill Interpretation</h2>
+    <div className="interpret-container">
+      <p className="interpret-link">Bill Interpretation</p>
       <p>{interpretation}</p>
     </div>
   );

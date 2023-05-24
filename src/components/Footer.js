@@ -4,21 +4,27 @@ export default function Footer() {
   {
     /* Footer */
   }
-  <div>
-    <footer className="govinfo-footer">
+  <div className="footer-container">
+    <footer className="footer-footer">
       <p>
         &copy; {new Date().getFullYear()} KeepAccountable. All rights reserved.
       </p>
-      <nav className="govinfo-footer-nav">
-        <ul>
-          <li>
-            <a href="/privacy">Privacy Policy</a>
+      <nav className="footer-nav">
+        <ul className="footer-list">
+          <li className="footer-item">
+            <a href="/privacy" className="footer-link">
+              Privacy Policy
+            </a>
           </li>
           <li>
-            <a href="/terms">Terms of Service</a>
+            <a href="/terms" className="footer-link">
+              Terms of Service
+            </a>
           </li>
           <li>
-            <a href="/sitemap">Sitemap</a>
+            <a href="/sitemap" className="footer-link">
+              Sitemap
+            </a>
           </li>
         </ul>
       </nav>

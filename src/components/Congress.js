@@ -26,12 +26,14 @@ export default function Congress() {
   }
 
   return (
-    <div>
-      <h1>Congress Members</h1>
-      <ul>
+    <div className="congress-container">
+      <h1 className="congress-title">Congress Members</h1>
+      <ul className="congress-list">
         {memberData.members.map((member) => (
           <Link to={`/congressMembers/${member.members}/`}>
-            <li key={member}>{member.members}</li>
+            <li key={member} className="congress-member">
+              {member.members}
+            </li>
           </Link>
         ))}
       </ul>

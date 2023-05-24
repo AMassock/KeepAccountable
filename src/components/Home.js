@@ -3,24 +3,24 @@ import { Bills } from "../pages/index";
 
 export default function Home() {
   return (
-    <div className="govinfo-container">
+    <div className="home-container">
       {/* Main Content */}
-      <div className="govinfo-content">
+      <div className="home-content">
         {/* Search Bar */}
-        <div className="govinfo-search-bar">
+        <div className="home-search-bar">
           <input type="text" placeholder="Search..." />
-          <button>Search</button>
+          <button className="home-button">Search</button>
         </div>
 
         {/* Content Sections */}
-        <section className="govinfo-section">
-          <h2>Featured Documents</h2>
+        <section className="home-section">
+          <h2 className="home-featured">Featured Documents</h2>
           {/* Display featured documents */}
-          <Bills limit="5" />
+          {/* <Bills limit="5" /> */}
         </section>
 
-        <section className="govinfo-section">
-          <h2>Latest Updates</h2>
+        <section className="home-section">
+          <h2 className="home-update">Latest Updates</h2>
           {/* Display latest updates */}
         </section>
       </div>
