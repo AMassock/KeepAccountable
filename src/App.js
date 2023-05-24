@@ -8,6 +8,7 @@ import {
   Congress,
   // Navbar,
   // NotFound,
+  AuthForm,
   Layout,
 } from "./pages/index";
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/bill/:congress/:type/:number" element={<Bill />} />
           <Route path="/congressMembers/" element={<Congress />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/login" element={<AuthForm />} />
         </Route>
       </Routes>
     </div>

@@ -24,6 +24,9 @@ export default function Navbar() {
         <li className="navbar-item">
           <Link to="/dashboard">Dashboard</Link>
         </li>
+        <li className="navbar-item">
+          <Link to="/login">Login/Register</Link>
+        </li>
       </ul>
     </nav>
   );

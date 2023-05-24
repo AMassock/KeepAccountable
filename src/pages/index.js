@@ -8,6 +8,7 @@ import Layout from "./Layout.js";
 import BillInterpretation from "../components/BillInterpret.js";
 import Footer from "../components/Footer.js";
 import Congress from "../components/Congress.js";
+import AuthForm from "../components/AuthForm.js";
 
 export {
   Home,
@@ -18,6 +19,7 @@ export {
   Navbar,
   // NotFound,
   BillInterpretation,
+  AuthForm,
   Footer,
   Layout,
 };
