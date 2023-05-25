@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const AuthForm = () => {
   const [username, setUsername] = useState("");
@@ -6,40 +7,33 @@ const AuthForm = () => {
   const [message, setMessage] = useState("");
   const [isLogin, setIsLogin] = useState(true);
 
-  //   const handleSubmit = async (e) => {
-  //     e.preventDefault();
-
-  //     const apiUrl = "localhost:8000";
-  //     const endpoint = isLogin ? "login/" : "register/";
-
-  //     try {
-  //       const response = await fetch(apiUrl + endpoint, {
-  //         method: "POST",
-  //         mode: "cors",
-  //         username,
-  //         password,
-  //       });
-
-  //       // Handle the response
-  //       console.log(response.data);
-  //     } catch (error) {
-  //       // Handle the error here
-  //       console.error(error);
-  //     }
-  //   };
-
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8000/register/", {
-        method: "POST",
-        mode: "cors",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
+      //   const response = await axios.post("http://localhost:8000/register/", {
+      //     method: "POST",
+      //     mode: "cors",
+      //     credentials: "include",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //     body: JSON.stringify({ username, password }),
+      //   });
+      const response = await axios.post(
+        "https://boiling-atoll-94851.herokuapp.com/register/",
+        {
+          username,
+          password,
         },
-        body: JSON.stringify({ username, password }),
-      });
+        {
+          method: "POST",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
 
       const data = await response.json();
       setMessage(data.success || data.error);
@@ -51,15 +45,18 @@ const AuthForm = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8000/login/", {
-        method: "POST",
-        mode: "cors",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, password }),
-      });
+      const response = await fetch(
+        "https://boiling-atoll-94851.herokuapp.com/login/",
+        {
+          method: "POST",
+          mode: "cors",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        }
+      );
 
       const data = await response.json();
       setMessage(data.success || data.error);
