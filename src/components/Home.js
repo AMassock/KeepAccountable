@@ -1,5 +1,6 @@
 import React from "react";
-import { Bills } from "../pages/index";
+import Featured from "./Featured";
+import "./styles/Home.css";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         <section className="home-section">
           <h2 className="home-featured">Featured Documents</h2>
           {/* Display featured documents */}
-          {/* <Bills limit="5" /> */}
+          <Featured />
         </section>
 
         <section className="home-section">

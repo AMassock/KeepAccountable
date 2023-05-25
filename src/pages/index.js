@@ -9,6 +9,7 @@ import BillInterpretation from "../components/BillInterpret.js";
 import Footer from "../components/Footer.js";
 import Congress from "../components/Congress.js";
 import AuthForm from "../components/AuthForm.js";
+import Featured from "../components/Featured.js";
 
 export {
   Home,
@@ -20,6 +21,7 @@ export {
   // NotFound,
   BillInterpretation,
   AuthForm,
+  Featured,
   Footer,
   Layout,
 };

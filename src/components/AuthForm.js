@@ -12,18 +12,18 @@ const AuthForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://boiling-atoll-94851.herokuapp.com/register/",
+        "http://localhost:8000/register/",
+        // "https://boiling-atoll-94851.herokuapp.com/register/",
         {
           username,
           password,
         },
         {
-          method: "POST",
           mode: "cors",
+          credentials: "include",
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "multipart/form-data",
           },
-          withCredentials: true,
         }
       );
 
@@ -38,7 +38,8 @@ const AuthForm = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://boiling-atoll-94851.herokuapp.com/login/",
+        "http://localhost:8000/login/",
+        // "https://boiling-atoll-94851.herokuapp.com/login/",
         {
           method: "POST",
           mode: "cors",
