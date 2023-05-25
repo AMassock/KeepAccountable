@@ -31,7 +31,18 @@ export default function Bills(limit) {
         {billData.bills.map((bill) => (
           <Link to={`/bill/${bill.congress}/${bill.type}/${bill.number}`}>
             <li key={bill.number} className="bills-link">
-              {bill.title}
+              <p className="bills-congress">
+                Congress Number: {bill.congress}
+                <br />
+              </p>
+              <p className="bills-number">
+                Bill Number: {bill.number}
+                <br />
+              </p>
+              <p className="bills-title">
+                Bill Title: {bill.title}
+                <br />
+              </p>
             </li>
           </Link>
         ))}

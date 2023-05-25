@@ -8,7 +8,7 @@ const AuthForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const apiUrl = "http://your-django-backend/api/";
+    const apiUrl = "localhost:8000";
     const endpoint = isLogin ? "login/" : "create/";
 
     try {
