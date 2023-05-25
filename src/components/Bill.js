@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import BillInterpretation from "./BillInterpret";
+import Description from "./Description";
 
 const BillDetails = () => {
   const { congress, type, number } = useParams();
@@ -54,7 +55,9 @@ const BillDetails = () => {
     <div key={number}>
       <h1>Bill Details</h1>
       <h2>Title: {bill.bill.title}</h2>
-      <p>Description: {bill.bill.description}</p>
+      <p>
+        Description: <Description />
+      </p>
       <div key={number} onClick={() => handleBillClick(number)}>
         <BillInterpretation billId={selectedBillId} />
       </div>
