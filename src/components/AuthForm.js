@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./styles/AuthForm.css";
 
 const AuthForm = () => {
   const [username, setUsername] = useState("");
@@ -10,15 +11,6 @@ const AuthForm = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      //   const response = await axios.post("http://localhost:8000/register/", {
-      //     method: "POST",
-      //     mode: "cors",
-      //     credentials: "include",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify({ username, password }),
-      //   });
       const response = await axios.post(
         "https://boiling-atoll-94851.herokuapp.com/register/",
         {
@@ -87,11 +79,7 @@ const AuthForm = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        {/* <button type="submit">{isLogin ? "Login" : "Create Account"}</button> */}
       </form>
-      {/* <p onClick={() => setIsLogin(!isLogin)}>
-        {isLogin ? "Create an account" : "Already have an account? Login"}
-      </p> */}
       <button onClick={handleRegister}>Register</button>
       <button onClick={handleLogin}>Login</button>
       <p>{message}</p>
