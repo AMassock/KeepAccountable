@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# KeepAccountable
 
 ## Description:
 This is an application that consumes the congress.gov API and the OpenAPI chatGPT api to take bill data and make it easily understandable.
